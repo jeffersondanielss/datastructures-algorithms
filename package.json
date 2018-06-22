@@ -1,0 +1,8 @@
+{
+  "name": "datastructures-algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jeffersondanielss/datastructures-algorithms.git",
+  "author": "Jefferson Daniel <jdsilva@sp.r7.com>",
+  "license": "MIT"
+}
