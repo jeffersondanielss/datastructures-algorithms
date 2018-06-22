@@ -10,4 +10,4 @@ push | pop | clean | peek | length | isEmpty
 O(1) | O(1) | O(1) | O(1) |  O(1)  | O(1)
 
 
-[Stack](https://www.wikiwand.com/en/Stack_(abstract_data_type)
+[Stack](https://www.wikiwand.com/en/Stack_(abstract_data_type))
