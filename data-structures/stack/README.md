@@ -5,9 +5,15 @@ In computer science, a stack is an abstract data type that serves as a collectio
 
 ## Methods Big O Notation 
 
-push | pop | clean | peek | length | isEmpty
------| --- | ----- | -----|--------|------
-O(1) | O(1) | O(1) | O(1) |  O(1)  | O(1)
+method  | description | complexity
+------- | ----------- | ----------
+push    | | O(1) 
+pop     | | O(1)
+clean   | | O(1)
+peek    | | O(1)
+length  | | O(1)
+isEmpty | | O(1)
+
 
 
 [Stack](https://www.wikiwand.com/en/Stack_(abstract_data_type))
