@@ -7,12 +7,12 @@ In computer science, a stack is an abstract data type that serves as a collectio
 
 method  | description | complexity
 ------- | ----------- | ----------
-push    | | O(1) 
-pop     | | O(1)
-clean   | | O(1)
-peek    | | O(1)
-length  | | O(1)
-isEmpty | | O(1)
+push    | add new item in stack top | O(1) 
+pop     | remove a item in stack top | O(1)
+clean   | remove all itens in stack | O(1)
+peek    | returns the of top element of stack | O(1)
+length  | returns the number of elements of stack | O(1)
+isEmpty | check if stack has not elements | O(1)
 
 
 
