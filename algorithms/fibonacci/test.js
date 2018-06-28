@@ -20,6 +20,10 @@ test('calculates correct fib value for 4', () => {
   expect(fibonacci(4)).toEqual(3);
 });
 
+test('calculates correct fib value for 6', () => {
+  expect(fibonacci(6)).toEqual(8);
+});
+
 test('calculates correct fib value for 12', () => {
   expect(fibonacci(12)).toEqual(144);
 });
