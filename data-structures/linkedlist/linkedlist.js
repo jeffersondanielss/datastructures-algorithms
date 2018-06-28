@@ -130,10 +130,22 @@ class LinkedList {
   }
 
   forEach(callback) {
-    let size = this.size()
+    let node = this.head;
+    let counter = 0;
 
-    for( let i = 0; i < size; i++ ) {
-      callback( this.getAt(i) );
+    while(node) {
+      callback( node, counter );
+      node = node.next;
+      counter++;
+    }
+  }
+
+  *[Symbol.iterator]() {
+    let node = this.head;
+
+    while(node) {
+      yield node;
+      node = node.next;
     }
   }
 
