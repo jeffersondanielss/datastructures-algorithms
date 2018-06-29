@@ -29,3 +29,42 @@ describe('insert', () => {
   })
 
 })
+
+test('Traverse tree in order', () => {
+  const tree = new BinarySearchTree();
+  const arr = [];
+  const getKeys = item => arr.push(item);
+
+  tree.insert(20)
+  tree.insert(4)
+  tree.insert(-20)
+  tree.insert(21)
+  tree.insert(3)
+  tree.insert(1000)
+  tree.insert(1)
+  tree.traverseInOrder(getKeys)
+
+  expect(arr).toEqual([-20,1,3,4,20,21,1000])
+})
+
+test('get minimum number in tree', () => {
+  const tree = new BinarySearchTree();
+  tree.insert(20)
+  tree.insert(4)
+  tree.insert(-20)
+  tree.insert(21)
+  tree.insert(3)
+
+  expect(tree.min()).toEqual(-20)
+})
+
+test('get maximum number in tree', () => {
+  const tree = new BinarySearchTree();
+  tree.insert(20)
+  tree.insert(4)
+  tree.insert(-20)
+  tree.insert(21)
+  tree.insert(3)
+
+  expect(tree.max()).toEqual(21)
+})
