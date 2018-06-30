@@ -60,10 +60,23 @@ class BinarySearchTree {
     
     return this.getMax(node.right);
   }
-  
-  
-  printNode(value) {
-    console.log(value)
+
+  searchNode(node, key){
+    if(!node) { return null };
+
+    if( node.key === key ) {
+      return node;
+    }
+
+    if( key > node.key ) {
+      return this.searchNode(node.right, key);
+    } else {
+      return this.searchNode(node.left, key);
+    }
+  }
+
+  search(key) {
+    return this.searchNode(this.root, key)
   }
   
   traverseInOrder(callback) {

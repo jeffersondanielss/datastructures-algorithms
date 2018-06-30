@@ -68,3 +68,39 @@ test('get maximum number in tree', () => {
 
   expect(tree.max()).toEqual(21)
 })
+
+describe('search', () => {
+  test('when tree is empty returns null', () => {
+    const tree = new BinarySearchTree();
+
+    expect(tree.search(10)).toBeNull();
+  })
+
+  test('when root is a searched value return node', () => {
+    const tree = new BinarySearchTree();
+    tree.insert(10)
+
+    expect(tree.search(10)).toEqual({key: 10, left: null, right: null});
+  })
+
+  test('when tree has many itens', () => {
+    const tree = new BinarySearchTree()
+    tree.insert(11)
+    tree.insert(7)
+    tree.insert(15)
+    tree.insert(5)
+    tree.insert(3)
+    tree.insert(9)
+    tree.insert(8)
+    tree.insert(10)
+    tree.insert(13)
+    tree.insert(12)
+    tree.insert(14)
+    tree.insert(20)
+    tree.insert(18)
+    tree.insert(25)
+
+    expect(tree.search(13)).toEqual({key: 13, left: {key: 12, left: null, right: null }, right: {key: 14, left: null, right: null } })
+    expect(tree.search(12)).toEqual({key: 12, left: null, right: null })
+  })
+})

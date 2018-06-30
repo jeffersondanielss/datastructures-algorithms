@@ -1,4 +1,4 @@
-export class Stack {
+class Stack {
 
   constructor() {
     this.data = [];
@@ -29,3 +29,5 @@ export class Stack {
   }
 
 }
+
+module.exports = Stack
