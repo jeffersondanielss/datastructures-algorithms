@@ -102,5 +102,36 @@ describe('search', () => {
 
     expect(tree.search(13)).toEqual({key: 13, left: {key: 12, left: null, right: null }, right: {key: 14, left: null, right: null } })
     expect(tree.search(12)).toEqual({key: 12, left: null, right: null })
-  })
-})
+  });
+
+  describe('remove', () => {
+    const tree = new BinarySearchTree();
+
+    beforeEach(() => {
+      tree.insert(11)
+      tree.insert(7)
+      tree.insert(15)
+      tree.insert(5)
+      tree.insert(3)
+      tree.insert(9)
+      tree.insert(8)
+      tree.insert(10)
+      tree.insert(13)
+      tree.insert(12)
+      tree.insert(14)
+      tree.insert(20)
+      tree.insert(18)
+      tree.insert(25)
+    })
+
+    test('remove item in tree do not throw error', () => {
+      expect( () => tree.remove(10) ).not.toThrow();
+    });
+
+    test('remove a leaf in tree', () => {
+      tree.remove(6);
+      expect(tree.search(6)).toEqual(null);
+    });
+
+  });
+});
