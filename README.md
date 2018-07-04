@@ -1,4 +1,8 @@
-# DATA STRUCTURES AND ALGORITHMS
+<h1 align="center">Data Structures and Algorithms</h1>
+
+<p align="center">
+  <img src="resources/logo.svg">
+</p>
 
 ## Data Structures
 - [x] Binary Search Tree
@@ -7,7 +11,6 @@
 - [x] Stack
 - [ ] Dicionary
 - [ ] Hash Table
-
 
 ## Algorithms
 - [x] Circular
