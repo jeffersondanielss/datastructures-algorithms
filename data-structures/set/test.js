@@ -1,5 +1,6 @@
 const Set = require('./set');
 const s = new Set();
+const otherSet = new Set();
 
 beforeEach(() => {
   s.add(1)
@@ -10,6 +11,7 @@ beforeEach(() => {
 
 afterEach(() => {
   s.clear();
+  otherSet.clear();
 })
 
 test('Set is a class', () => {
@@ -63,9 +65,6 @@ test('clear shound remove all itens in set', () => {
 
 
 describe('union', () => {
-
-  const otherSet = new Set();
-
   beforeEach(() => {
     otherSet.add(5)
     otherSet.add(6)
@@ -73,13 +72,30 @@ describe('union', () => {
     otherSet.add(8)
   })
 
-  test('union does not throw error', () => {
+  test('does not throw error', () => {
     expect(() => s.union(otherSet)).not.toThrow();
   });
 
-  test('union two sets', () => {
+  test('two sets', () => {
     const newSet = s.union(otherSet);
 
     expect(newSet.values()).toEqual([1,2,3,4,5,6,7,8])
   });
 });
+
+describe('intersection', () => {
+  beforeEach(() => {
+    otherSet.add(3);
+    otherSet.add(4);
+    otherSet.add(5);
+    otherSet.add(6);
+  })
+
+  test('Does not throw error', () => {
+    expect(() => s.intersection(otherSet)).not.toThrow();
+  })
+
+  test('return just itens that there in both structures', () => {
+    expect(s.intersection(otherSet).values()).toEqual([3,4])
+  })
+})

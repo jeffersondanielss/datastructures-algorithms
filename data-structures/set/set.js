@@ -58,20 +58,36 @@ function Set() {
 
   this.union = function(setToUnion) {
     const newSet = new Set();
-    let values = this.values();
 
-    for( let i = 0; i < values.length; i++ ) {
-      newSet.add(values[i]);
+    for( let value of this.values() ) {
+      newSet.add(value);
     }
 
-    values = setToUnion.values();
-
-    for( let i = 0; i < values.length; i++ ) {
-      newSet.add(values[i]);
+    for( let value of setToUnion.values() ) {
+      newSet.add(value);
     }
 
     return newSet;
   }
+
+  /**
+   * return just itens that there in both structures
+   * 
+   * @param {Set} setToIntersect - Structure to be intersect with current Set
+   * @returns {Set} - new Set with commom itens
+   */
+
+   this.intersection = function(setToIntersect) {
+     const newSet = new Set();
+
+     for( let value of this.values() ) {
+      if( setToIntersect.has(value) ) {
+        newSet.add(value);
+      }
+     }
+
+    return newSet;
+   }
 }
 
 module.exports = Set
