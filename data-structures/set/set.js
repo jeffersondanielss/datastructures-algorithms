@@ -48,6 +48,30 @@ function Set() {
 
     return values;
   }
+
+  /**
+   * Union two sets
+   * 
+   * @param {Set} setToUnion - Set data structure to union
+   * @returns {Set} - new Set data structure with all data
+   */
+
+  this.union = function(setToUnion) {
+    const newSet = new Set();
+    let values = this.values();
+
+    for( let i = 0; i < values.length; i++ ) {
+      newSet.add(values[i]);
+    }
+
+    values = setToUnion.values();
+
+    for( let i = 0; i < values.length; i++ ) {
+      newSet.add(values[i]);
+    }
+
+    return newSet;
+  }
 }
 
 module.exports = Set
