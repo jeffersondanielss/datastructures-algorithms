@@ -1,13 +1,13 @@
 function Set() {
-  let itens = {}
+  let items = {}
 
   this.has = function(record) {
-    return record in itens
+    return record in items
   }
 
   this.add = function(item) {
     if( !this.has(item) ) {
-      itens[item] = item
+      items[item] = item
       return true
     }
 
@@ -16,7 +16,7 @@ function Set() {
 
   this.delete = function(item) {
     if( this.has(item) ) {
-      delete itens[item]
+      delete items[item]
       return true
     }
 
@@ -26,8 +26,8 @@ function Set() {
   this.size = function() {
     let count = 0;
 
-    for( let key in itens ) {
-      if( itens.hasOwnProperty(key) ) {
+    for( let key in items ) {
+      if( items.hasOwnProperty(key) ) {
         count++
       }
     }
@@ -36,14 +36,14 @@ function Set() {
   }
 
   this.clear = function() {
-    itens = {}
+    items = {}
   }
 
   this.values = function() {
     let values = []
 
-    for( let i = 0, keys = Object.keys(itens); i < keys.length; i++ ) {
-      values.push( itens[keys[i]] )
+    for( let i = 0, keys = Object.keys(items); i < keys.length; i++ ) {
+      values.push( items[keys[i]] )
     }
 
     return values;
@@ -71,10 +71,10 @@ function Set() {
   }
 
   /**
-   * return just itens that there in both structures
+   * return just items that there in both structures
    * 
    * @param {Set} setToIntersect - Structure to be intersect with current Set
-   * @returns {Set} - new Set with commom itens
+   * @returns {Set} - new Set with commom items
    */
 
    this.intersection = function(setToIntersect) {
