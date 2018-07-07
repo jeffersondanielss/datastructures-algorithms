@@ -9,7 +9,7 @@
 - [x] Linked List
 - [x] Set
 - [x] Stack
-- [ ] Dicionary
+- [x] Dictionary
 - [ ] Hash Table
 
 ## Algorithms
