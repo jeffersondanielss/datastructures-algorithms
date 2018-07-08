@@ -88,6 +88,25 @@ function Set() {
 
     return newSet;
    }
+
+   /**
+    * Get different items in Sets
+    * 
+    * @param {Set} differenceSet
+    * @returns {Set}
+    */
+
+   this.difference = function(differenceSet) {
+    const newSet = new Set();
+
+     for( let value of this.values() ) {
+      if( !differenceSet.has(value) ) {
+        newSet.add(value);
+      }
+     }
+
+    return newSet;
+   }
 }
 
 module.exports = Set

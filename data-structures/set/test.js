@@ -98,4 +98,21 @@ describe('intersection', () => {
   test('return just itens that there in both structures', () => {
     expect(s.intersection(otherSet).values()).toEqual([3,4])
   })
-})
+});
+
+describe('difference', () => {
+  beforeEach(() => {
+    otherSet.add(3);
+    otherSet.add(4);
+    otherSet.add(5);
+    otherSet.add(6);
+  })
+
+  test('Does not throw error', () => {
+    expect(() => s.difference(otherSet)).not.toThrow();
+  })
+
+  test('return just different itens in structures', () => {
+    expect(s.difference(otherSet).values()).toEqual([1,2])
+  })
+});
