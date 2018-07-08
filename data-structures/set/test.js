@@ -116,3 +116,28 @@ describe('difference', () => {
     expect(s.difference(otherSet).values()).toEqual([1,2])
   })
 });
+
+
+describe('subset', () => {
+  const newSet = new Set();
+
+  beforeEach(() => {
+    otherSet.add(1);
+    otherSet.add(2);
+    otherSet.add(3);
+    otherSet.add(4);
+    otherSet.add(5);
+
+    newSet.add(3);
+    newSet.add(4);
+  })
+
+  test('Does not throw error', () => {
+    expect(() => s.subset(otherSet)).not.toThrow();
+  })
+
+  test('check if current set is a subset of other set', () => {
+    expect(s.subset(otherSet)).toBeTruthy()
+    expect(s.subset(newSet)).toBeFalsy()
+  })
+});

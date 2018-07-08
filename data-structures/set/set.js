@@ -107,6 +107,27 @@ function Set() {
 
     return newSet;
    }
+
+   /**
+    * Check if current set is a subset of other Set
+    * 
+    * @param {Set} otherSet
+    * @returns {Boolean}
+    */
+
+   this.subset = function(otherSet) {
+    if( this.size() > otherSet.size() ) {
+      return false;
+    }
+    
+    for( let value of this.values() ) {
+      if( !otherSet.has(value) ) {
+        return false;
+      }
+    }
+
+    return true;
+   }
 }
 
 module.exports = Set
