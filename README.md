@@ -10,7 +10,7 @@
 - [x] Set
 - [x] Stack
 - [x] Dictionary
-- [ ] Hash Table
+- [x] Hash Table
 
 ## Algorithms
 - [x] Circular
