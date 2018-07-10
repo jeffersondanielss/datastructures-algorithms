@@ -1,49 +1,88 @@
 function Set() {
-  let items = {}
+  let items = {};
+
+  /**
+   * Check if key exists in Set
+   * 
+   * @param {any} record - record to be searched
+   * @returns {Boolean}
+   */
 
   this.has = function(record) {
-    return record in items
+    return record in items;
   }
+
+  /**
+   * Add new item in Set
+   * 
+   * @param {any} item - item to be add
+   * @returns {void}
+   */
 
   this.add = function(item) {
     if( !this.has(item) ) {
-      items[item] = item
-      return true
+      items[item] = item;
+      return true;
     }
 
-    return false
+    return false;
   }
+
+  /**
+   * Remove a record in Set
+   * 
+   * @param {any} item - key of element to be deleted
+   * @returns {Boolean}
+   */
 
   this.delete = function(item) {
     if( this.has(item) ) {
-      delete items[item]
-      return true
+      delete items[item];
+      return true;
     }
 
-    return false
+    return false;
   }
+
+  /**
+   * Count number of items in dictionary
+   * 
+   * @returns {number}
+   */
 
   this.size = function() {
     let count = 0;
 
     for( let key in items ) {
       if( items.hasOwnProperty(key) ) {
-        count++
+        count++;
       }
     }
 
-    return count
+    return count;
   }
+
+  /**
+   * Remove all itens
+   * 
+   * @returns {void}
+   */
 
   this.clear = function() {
-    items = {}
+    items = {};
   }
 
+  /**
+   * Get all values in dictionary
+   * 
+   * @returns {array}
+   */
+
   this.values = function() {
-    let values = []
+    let values = [];
 
     for( let i = 0, keys = Object.keys(items); i < keys.length; i++ ) {
-      values.push( items[keys[i]] )
+      values.push( items[keys[i]] );
     }
 
     return values;

@@ -7,10 +7,13 @@
 ## Data Structures
 - [x] Binary Search Tree
 - [x] Linked List
+- [ ] Doubly Linked List
+- [ ] Circular Linked List
 - [x] Set
 - [x] Stack
 - [x] Dictionary
 - [x] Hash Table
+- [ ] Queue
 
 ## Algorithms
 - [x] Circular
