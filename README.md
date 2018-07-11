@@ -5,15 +5,15 @@
 </p>
 
 ## Data Structures
-- [x] Binary Search Tree
+- [x] Stack
+- [x] Queue
+- [x] Set
+- [x] Dictionary
+- [x] Hash Table
 - [x] Linked List
 - [ ] Doubly Linked List
 - [ ] Circular Linked List
-- [x] Set
-- [x] Stack
-- [x] Dictionary
-- [x] Hash Table
-- [ ] Queue
+- [x] Binary Search Tree
 
 ## Algorithms
 - [x] Circular
