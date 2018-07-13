@@ -9,10 +9,11 @@
 - [x] Queue
 - [x] Set
 - [x] Dictionary
-- [x] Hash Table
-- [x] Linked List
-- [ ] Doubly Linked List
-- [ ] Circular Linked List
+- [] Hash Table
+  - [ ] Separate Chaining
+- [] Linked List
+  - [ ] Doubly Linked List
+  - [ ] Circular Linked List
 - [x] Binary Search Tree
 
 ## Algorithms
