@@ -13,13 +13,13 @@ class hashTable {
    */
 
   hashCode(key) {
-    var hash = 0;
+    var hash = 5381;
 
     for(let char of key) {
-      hash += char.charCodeAt();
+      hash += 33 * char.charCodeAt();
     }
 
-    return hash % 37;
+    return hash % 1013;
   }
 
   /**
@@ -31,16 +31,15 @@ class hashTable {
    */
 
   put(key, value) {
-    var position = this.hashCode(key);
+    let position = this.hashCode(key);
 
-    if( this.table[position] == undefined ) {
+    if( this.table[position] === undefined ) {
       this.table[position] = new ValuePair(key, value);
     } else {
-      var index = ++position;
+      let index = ++position;
       while( this.table[index] != undefined ) {
         index++
       }
-
       this.table[index] = new ValuePair(key, value);
     }
   }
@@ -53,20 +52,19 @@ class hashTable {
    */
   
   get(key) {
-    var position = this.hashCode(key);
+    let position = this.hashCode(key);
 
-    if( this.table[position] !== undefined ) {
-      if ( this.table[position].key === key ) {
+    if ( this.table[position] !== undefined ) {
+      if( this.table[position].key === key ) {
         return this.table[position].value;
-      }
-
-      var index = ++position;
-      while( this.table[index] !== undefined && (this.table[index] && this.table[index].key !== key) ) {
-        index++
-      }
-
-      if( this.table[index] && this.table[index].key === key ) {
-        return this.table[index].value
+      } else {
+        let index = ++position;
+        while( this.table[index] !== undefined && ( this.table[index] && this.table[index].key !== key ) ) {
+          index++;
+        }
+        if( this.table[index] && this.table[index].key === key ) {
+          return this.table[index].value;
+        }
       }
     }
 
@@ -80,20 +78,19 @@ class hashTable {
    */
   
   remove(key) {
-    var position = this.hashCode(key);
+    let position = this.hashCode(key);
 
-    if( this.table[position] !== undefined ) {
-      if ( this.table[position].key === key ) {
-        this.table[position] = undefined
-      }
-
-      var index = ++position;
-      while( this.table[index] !== undefined && (this.table[index] && this.table[index].key !== key) ) {
-        index++
-      }
-
-      if( this.table[index] && this.table[index].key === key ) {
-        this.table[index] = undefined
+    if ( this.table[position] !== undefined ) {
+      if( this.table[position].key === key ) {
+        return this.table[position] = undefined;
+      } else {
+        let index = ++position;
+        while( this.table[index] !== undefined && ( this.table[index] && this.table[index].key !== key ) ) {
+          index++;
+        }
+        if( this.table[index] && this.table[index].key === key ) {
+          return this.table[index] = undefined;
+        }
       }
     }
 
