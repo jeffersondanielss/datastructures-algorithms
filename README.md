@@ -9,9 +9,9 @@
 - [x] Queue
 - [x] Set
 - [x] Dictionary
-- [ ] Hash Table
-- [ ] Hash Table Separate Chaining
-- [ ] Linked List
+- [x] Hash Table
+- [x] Hash Table Linar Probing
+- [x] Linked List
 - [ ] Doubly Linked List
 - [ ] Circular Linked List
 - [x] Binary Search Tree
