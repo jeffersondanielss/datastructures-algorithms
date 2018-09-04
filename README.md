@@ -24,7 +24,7 @@
 - [x] Buble Sort
 - [ ] Insertion Sort
 - [ ] Merge Sort
-- [ ] Selection Sort
+- [x] Selection Sort
 - [ ] Quick Sort
 
 ## Asymptotic analysis
