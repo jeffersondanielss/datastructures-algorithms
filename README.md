@@ -21,7 +21,7 @@
 - [x] fibonacci
 - [x] fromlast
 - [x] mindpoint
-- [ ] Buble Sort
+- [x] Buble Sort
 - [ ] Insertion Sort
 - [ ] Merge Sort
 - [ ] Selection Sort

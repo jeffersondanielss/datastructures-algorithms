@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "http-server ./",
-    "test": "jest ./data-structures/tree --watch",
+    "test": "jest ./ --watch",
     "commit": "semantic-commit"
   },
   "devDependencies": {
