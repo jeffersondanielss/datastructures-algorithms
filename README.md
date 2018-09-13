@@ -22,8 +22,8 @@
 - [x] fromlast
 - [x] mindpoint
 - [x] Buble Sort
-- [ ] Insertion Sort
-- [ ] Merge Sort
+- [x] Insertion Sort
+- [x] Merge Sort
 - [x] Selection Sort
 - [ ] Quick Sort
 
