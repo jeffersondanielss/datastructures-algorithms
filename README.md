@@ -25,7 +25,7 @@
 - [x] Insertion Sort
 - [x] Merge Sort
 - [x] Selection Sort
-- [ ] Quick Sort
+- [x] Quick Sort
 
 ## Asymptotic analysis
 

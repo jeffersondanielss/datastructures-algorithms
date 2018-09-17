@@ -40,8 +40,8 @@ const mergeSortRec = n => {
 /**
  * Order array
  * 
- * @param {Array} leftPart left pointer
- * @param {Array} rightPart right pointer
+ * @param {Array} leftPart left part of array
+ * @param {Array} rightPart right part of array
  * @returns {Array}
  * @example
  * merge([4, 2, 5], [5, 23, 5676, 3])
