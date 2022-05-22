@@ -15,6 +15,7 @@
 - [ ] Doubly Linked List
 - [ ] Circular Linked List
 - [x] Binary Search Tree
+- [x] Trie
 
 ## Algorithms
 - [x] Circular
