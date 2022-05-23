@@ -16,6 +16,7 @@
 - [ ] Circular Linked List
 - [x] Binary Search Tree
 - [x] Trie
+- [x] Graph
 
 ## Algorithms
 - [x] Circular
